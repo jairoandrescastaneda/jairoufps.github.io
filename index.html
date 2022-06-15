@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="zoom-in fade-out">How are architecture today? </section>
+				<section data-transition="zoom-in fade-out">
+					<h2>Common architecture</h2>
+					<img src="./assets/commonarchitecture.png" alt=""  >
+				</section>
+				<section data-transition="zoom-in fade-out">
+					<h2>More Really architecture</h2>
+
+					<div class="r-stack">
+						<img src="./assets/fullarchitecture.png" >
+					</div>
+				</section>
+				<section data-transition="zoom-in fade-out">
+					<h2>What happened if..</h2>
+
+					<div class="r-stack">
+						<img src="./assets/failurearchitecture.png" alt=""  class="fragment">
+					</div>
+				</section>
+
+				<section>
+					<h2 class="r-fit-text">We need Telemetry</h2>
+
+				</section>
+				<section>
+
+					<h2>Telemetry</h2>
+					<div class="r-stack">
+						<ul>
+							<li class="fragment">
+								Data emit for other system
+							</li>
+							<li class="fragment">
+								handle, transform, store and presentation
+							</li>
+						</ul>
+
+					</div>
+
+				</section>
+				<section>
+
+					<h2>Pillars</h2>
+					<div class="r-stack">
+						<img src="./assets/pillars.png" alt="" class="fragment">
+					</div>
+
+				</section>
+				<section>
+
+					<h2>How to work?</h2>
+					<div class="r-stack">
+						<img src="./assets/howtowroktelemetry.jpg" alt="" class="fragment">
+					</div>
+
+				</section>
+
+				<section data-transition="zoom-in fade-out">
+					<h2> Why AWS Lambdas?</h2>
+
+					<div class="r-stack">
+						<img src="./assets/comparative.png" alt="" height="600" width="700" class="fragment">
+					</div>
+				</section>
+				<section data-transition="zoom-in fade-out">
+					<h2>Start project</h2>
+
+					<div class="r-stack">
+						<img src="./assets/startporject.png" alt="" class="fragment">
+					</div>
+				</section>
+				<section data-transition="zoom-in fade-out">
+					<h2> Datadog</h2>
+
+					<div class="r-stack">
+						<img src="./assets/datadog.png" alt="" class="fragment">
+					</div>
+				</section>
+				<section data-transition="zoom-in fade-out">
+					<h2> Live</h2>
+
+					<div class="r-stack">
+						show example in live
+					</div>
+				</section>
+
+
+
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
