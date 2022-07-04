@@ -16,20 +16,104 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-transition="zoom-in fade-out">How are architecture today? </section>
+				<section data-transition="zoom-in fade-out">Observabilidad en serverless con datadog, AWS y python: tracing hasta el infinito y más allá </section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>Hi everyone!</h3>
+					<p>My name is Jairo</p>
+					<img src="assets/me.png"  height="500" width="500">
+					<pre data-id="code"><code data-line-numbers class="python" data-trim data-line-numbers="3,8-10">
+from pydantic import BaseModel
+
+
+class Speaker(BaseModel):
+    name: str
+    last_name: str
+    current_position: str
+    website: str
+    years_experience: int
+    interests: str
+    education: str
+
+    def say_hello(self):
+        print("Hello Everyone")
+
+
+jairo: Speaker = Speaker(
+    name="Jairo Andres",
+    last_name="Castañeda Pacheco",
+    years_experience=12,
+    current_position="Senior Backend Engineer, Payments at Simetrik",
+    interests="FinTech | AWS | Severless | Cloud Computing",
+    education="System engineer - Universidad Francisco de Paula Santander",
+    website="https://jairoandres.com"
+)
+
+me.say_hello()
+					</code></pre>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>About me</h3>
+					<pre data-id="code"><code  class="python" data-line-numbers="18-28">
+from pydantic import BaseModel
+
+
+class Speaker(BaseModel):
+    name: str
+    last_name: str
+    current_position: str
+    website: str
+    years_experience: int
+    interests: str
+    education: str
+
+    def say_hello(self):
+        print("Hello Everyone")
+
+
+me: Speaker = Speaker(
+    name="Jairo Andres",
+    last_name="Castañeda Pacheco",
+    years_experience=12,
+    current_position="Senior Backend Engineer, Payments at Simetrik",
+    interests="FinTech | AWS | Severless | Cloud Computing",
+    education="System engineer - Universidad Francisco de Paula Santander",
+    website="https://jairoandres.com"
+)
+
+me.say_hello()
+					</code></pre>
+				</section>
+
+
+				<section data-transition="zoom-in fade-out">How are you architecture today? </section>
 				<section data-transition="zoom-in fade-out">
-					<h2>Common architecture</h2>
-					<img src="./assets/commonarchitecture.png" alt=""  >
+					<h4>Transactional architecture</h4>
+					<img src="assets/transactional.png" alt=""  >
 				</section>
 				<section data-transition="zoom-in fade-out">
-					<h2>More Really architecture</h2>
+					<h4>Hybrid architecture</h4>
 
 					<div class="r-stack">
 						<img src="./assets/fullarchitecture.png" >
 					</div>
 				</section>
 				<section data-transition="zoom-in fade-out">
-					<h2>What happened if..</h2>
+					<h4>Event driver architecture</h4>
+
+					<div class="r-stack">
+						<img src="./assets/eventdefinition.png" >
+					</div>
+				</section>
+				<section data-transition="zoom-in fade-out">
+					<h4>The typical day in the lifetime of the programmer is 90% debugging and 10% writing code </h4>
+
+					<div class="r-stack">
+						<img src="./assets/joke.jpg" height="500" width="500">
+					</div>
+				</section>
+				<section data-transition="zoom-in fade-out">
+					<h4>What happened if..</h4>
 
 					<div class="r-stack">
 						<img src="./assets/failurearchitecture.png" alt=""  class="fragment">
@@ -37,12 +121,12 @@
 				</section>
 
 				<section>
-					<h2 class="r-fit-text">We need Telemetry</h2>
+					<h4 class="r-fit-text">We need Telemetry</h4>
 
 				</section>
 				<section>
 
-					<h2>Telemetry</h2>
+					<h4>Telemetry</h4>
 					<div class="r-stack">
 						<p>El arte de monitorear correctamente, consiste en enterarse que algo fallo, antes de que se entere el  cliente</p>
 
@@ -51,7 +135,7 @@
 				</section>
 				<section>
 
-					<h2>Telemetry</h2>
+					<h4>Telemetry</h4>
 					<div class="r-stack">
 						<ul>
 							<li class="fragment">
@@ -67,49 +151,77 @@
 				</section>
 				<section>
 
-					<h2>Pillars</h2>
+					<h4>Pillars</h4>
 					<div class="r-stack">
 						<img src="./assets/pillars.png" alt="" class="fragment">
 					</div>
 
 				</section>
+
+
 				<section>
 
-					<h2>How to work?</h2>
+					<h4>How to work?</h4>
 					<div class="r-stack">
 						<img src="./assets/howtowroktelemetry.png" alt="" class="fragment">
 					</div>
 
 				</section>
+				<section data-transition="zoom-in fade-out">
+					<h4>Two Questions</h4>
+
+
+				</section>
 
 				<section data-transition="zoom-in fade-out">
-					<h2> Why AWS Lambdas?</h2>
+					<h4> Why AWS Lambdas?</h4>
 
 					<div class="r-stack">
 						<img src="./assets/comparative.png" alt="" height="600" width="700" class="fragment">
 					</div>
 				</section>
-				<section data-transition="zoom-in fade-out">
-					<h2>Start project</h2>
 
+				<section >
+
+					<h4>Why we need centralized?</h4>
 					<div class="r-stack">
-						<img src="./assets/startporject.png" alt="" class="fragment">
+						<img src="./assets/centralized_log.png" alt="" class="fragment" height="600" width="1000">
 					</div>
+
+				</section>
+				<section data-background-video="assets/datadog.mp4">
+
 				</section>
 				<section data-transition="zoom-in fade-out">
-					<h2> Datadog</h2>
+					<h4>Know your limits, improve your value proposition</h4>
+
+					<div class="r-stack">
+						<img src="./assets/startproject.png" alt="" class="fragment">
+					</div>
+				</section>
+
+
+				<section data-transition="zoom-in fade-out">
+					<h4> Only datadog? of course not</h4>
 
 					<div class="r-stack">
 						<img src="./assets/datadog.png" alt="" class="fragment">
 					</div>
 				</section>
 				<section data-transition="zoom-in fade-out">
-					<h2> Live</h2>
+					<h4> Let's go</h4>
 
-					<div class="r-stack">
-						show example in live
-					</div>
+
 				</section>
+				<section data-transition="zoom-in fade-out">
+					<h4> Open positions</h4>
+					<img src="./assets/simetrik.png" alt="" class="fragment" width="300" height="300">
+
+					<img src="./assets/frame.png" alt="" class="fragment">
+
+
+				</section>
+
 
 
 
